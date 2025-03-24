@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/IIMTE_Karnataka-0.0.1-SNAPSHOT.jar IIMTE_Karnataka.jar
+COPY --from=build /target/IIMTE_Karnataka_Portal-0.0.1-SNAPSHOT.jar IIMTE_Karnataka_Portal.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","IIMTE_Karnataka.jar"]
