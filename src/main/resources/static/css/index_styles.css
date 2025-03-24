@@ -1,0 +1,1021 @@
+@charset "UTF-8";
+
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sticky Outer Container */
+.sticky-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and Name Container */
+.name_and_logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(to right, 
+            rgb(148, 148, 212) 2%,  
+            white 20%,            
+            white 80%,            
+            rgb(148, 148, 212) 98%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+/*     padding: 10px 0; */
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    background: linear-gradient(to right, white 2%, rgb(163, 163, 231) 35%, rgb(163, 163, 231) 65%, white 98%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Navigation Menu */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Items */
+.navbar ul li {
+    margin: 0 15px;
+}
+
+/* Navigation Links */
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(51, 51, 122);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+/* Hover Effect */
+.navbar ul li a:hover {
+    background-color: rgb(51, 51, 122);
+    color: white;
+    border-radius: 5px;
+}
+
+/* Image Slider Container */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Slider Images Container */
+.slider-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Images */
+.slider-images img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Navigation Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    background-color: rgba(100, 101, 98, 0.601);
+}
+
+.slider-btn.prev-btn {
+    left: 10px;
+}
+
+.slider-btn.next-btn {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Small Image Collection Container */
+.image-collection {
+    width: 100%;
+    height: 160px; /* Slightly taller for better spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, 
+        rgb(148, 148, 212) 2%,  /* Dark blue fades out quickly */
+        white 20%,     
+        rgb(148, 148, 212) 50%,       /* White starts early */
+        white 80%,            /* White remains dominant */
+        rgb(148, 148, 212) 98%  /* Dark blue appears only at the right edge */
+    );
+    overflow: hidden; /* Hide overflow */
+    padding: 15px 0; /* Add padding */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Image Container */
+.collection-images {
+    display: flex;
+    gap: 50px; /* Even spacing between images */
+    padding: 0 20px; /* Add padding to the sides */
+    animation: scroll 40s linear infinite; /* Auto-scroll animation */
+    
+}
+
+/* Individual Images */
+.collection-images img {
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: contain; /* Ensure images cover the area */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow */
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+/* Hover Effect */
+.collection-images img:hover {
+    transform: scale(1.1); /* Enlarge image on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow */
+    z-index: 10; /* Bring hovered image to the front */
+}
+
+/* Auto-scroll Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-38%);
+    }
+}
+
+/* Pause Animation on Hover */
+.image-collection:hover .collection-images {
+    animation-play-state: paused;
+}
+
+/* Viewing Effect (Optional) */
+.collection-images img:active {
+    transform: scale(1.5); /* Enlarge image on click */
+    z-index: 20; /* Bring clicked image to the front */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Larger shadow */
+}
+
+/* Mobile Navigation (Hidden by Default) */
+.menu-toggle {
+    display: none; /* Hide it on desktop */
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive Image */
+.for_default {
+    margin-top: 5px;
+    max-width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+    object-fit: contain;
+}
+
+/* Full-width Container */
+.full-width-container {
+    width: 100%;
+    height: 100px; /* Allow height to adjust based on content */
+    display: flex;
+    flex-direction: row; /* Default layout: side by side */
+    align-items: center;
+    background: linear-gradient(to right, white 2%, rgb(163, 163, 231) 35%, rgb(163, 163, 231) 65%, white 98%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+/* First Partition (70%) - Notice Board */
+.notice-section {
+    width: 80%; /* Default width for larger screens */
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    background-color: #dfeb37;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Notice Icon */
+.section-icon {
+    width: 100px;
+    height: 100%;
+    /* object-fit: contain; */
+}
+
+/* Notice Content */
+.notice-content {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+    color: #0253f6;
+    background: linear-gradient(to right, rgb(227, 196, 142), white, rgb(227, 196, 142));
+}
+
+/* Notice Content Heading */
+.notice-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #000000;
+    background: linear-gradient(to left, #37eb79, #5663cd, #37eb79);
+    padding: 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+/* Scrolling Text */
+.scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.scrolling-text p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #001eff;
+    display: inline-block;
+    padding-left: 10%;
+    animation: scroll-text 30s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Second Partition (30%) - Login Button */
+.login-section {
+    width: 20%; /* Default width for larger screens */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    z-index: 1;
+    /* background: linear-gradient(to left, #37eb79, #5663cd, #37eb79); */
+    background: linear-gradient(to right, #56e98c, #ffffff);
+}
+
+/* Login Icon */
+.login-section .section-icon {
+    margin-right: 30px;
+}
+
+/* Login Button */
+.login-btn {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #bc0e0e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.login-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Effect (when clicked) */
+.login-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Full-width Container */
+.full-width-container2 {
+    margin-top: 5px;
+    width: 100%;
+    height: 1010px; /* Fixed height */
+    display: flex;
+    justify-content: center; /* Center the inner container */
+    align-items: center;
+    background: linear-gradient(to right, 
+            rgb(148, 148, 212) 2%,  /* Dark blue fades out quickly */
+            white 20%,            /* White starts early */
+            white 80%,            /* White remains dominant */
+            rgb(148, 148, 212) 98%  /* Dark blue appears only at the right edge */
+        );
+    padding: 20px 0; /* Add some padding */
+}
+
+/* Centered Inner Container */
+.inner-container {
+    width: 70%; /* 100% - 15% margin on both sides */
+    height: 100%; /* Full height of the parent */
+    display: flex;
+    gap: 20px; /* Space between sectors */
+}
+
+/* Sectors */
+.sector {
+    height: 100%; /* Full height of the inner container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    background-color: #fff; /* White background */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* First Sector (65%) */
+.sector-left {
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(213, 216, 214), #ffffff, rgb(213, 216, 214));
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* About College Header */
+.about-college-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0253f6; /* Blue text color */
+    text-align: center;
+    margin-bottom: 20px; /* Space below the header */
+    position: relative;
+    padding-bottom: 10px; /* Space for the underline */
+}
+
+.about-college-header::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #0253f6; /* Blue underline */
+    border-radius: 2px;
+}
+
+/* About College Content */
+.about-college-content {
+    display: block;
+    margin-top: 5px;
+}
+
+/* College Image */
+.college-image {
+    width: 50%; /* Half the width of the first sector */
+    height: 300px; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    float: left; /* Float the image to the left */
+    margin-right: 20px; /* Add space between image and text */
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+/* College Text */
+.college-text p {
+    text-align: justify; /* Justify paragraph text */
+    font-size: 16px;
+    color: #333; /* Dark text color */
+    line-height: 1.6; /* Improve readability */
+    overflow: hidden; /* Clear the float */
+}
+
+/* Second Sector (35%) */
+.sector-right {
+    width: 35%;
+    background: linear-gradient(to right, rgb(213, 216, 214), #ffffff, rgb(213, 216, 214)); /* Adjust gradient */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Quick Links Header */
+.quick-links-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0253f6; /* Blue text color */
+    text-align: center;
+    margin-bottom: 20px; /* Space below the header */
+    position: relative;
+    padding-bottom: 10px; /* Space for the underline */
+}
+
+.quick-links-header::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #0253f6; /* Blue underline */
+    border-radius: 2px;
+}
+
+/* Quick Links List */
+.quick-links-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin-top: 5px;
+}
+
+.quick-links-list li {
+    margin-bottom: 15px; /* Space between list items */
+}
+
+.quick-links-list li a {
+    text-decoration: none; /* Remove underline */
+    font-size: 18px;
+    font-weight: bold; 
+    color: #333; /* Dark text color */
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.quick-links-list li a::before {
+    content: "•"; /* Custom bullet */
+    color: #0253f6; /* Blue bullet */
+    font-weight: bold;
+    margin-right: 10px; /* Space between bullet and text */
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.quick-links-list li a:hover {
+    color: #0253f6; /* Blue text on hover */
+    transform: translateX(5px); /* Slight move to the right */
+}
+
+.quick-links-list li a:hover::before {
+    color: #ff6b6b; /* Red bullet on hover */
+}
+
+/* Remaining Content */
+.remaining-content {
+    flex: 1; /* Take up remaining height */
+    width: 100%;
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: 1fr 1fr; /* Two equal rows */
+    gap: 30px; /* Space between grid items */
+}
+
+/* Grid Items */
+.grid-item {
+    background: linear-gradient(to right, 
+            rgb(148, 148, 212),  /* Dark blue fades out quickly */
+            white ,          
+            rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
+        );
+    padding: 10px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Grid Items */
+.grid-item:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Grid Header */
+.grid-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; /* White text color */
+    background-color: rgb(59, 68, 155); /* Blue background */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below the header */
+    text-align: center;
+    width: 100%; /* Full width */
+}
+
+/* Grid Icon */
+.grid-icon {
+    font-size: 40px; /* Large icon size */
+    margin-bottom: 7px; /* Space below the icon */
+    width: 60px; /* Set a fixed width */
+    height: 60px; /* Set a fixed height */
+    object-fit: contain; /* Ensure the image fits within the dimensions */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Icon */
+.grid-item:hover .grid-icon {
+    transform: scale(1.2); /* Enlarge icon on hover */
+}
+
+/* Grid Link */
+.grid-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0253f6; /* Blue text color */
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between text and arrow */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Link */
+.grid-link:hover {
+    color: #ff6b6b; /* Red text on hover */
+}
+
+/* Arrow Animation */
+.grid-link::after {
+    content: "→";
+    transition: transform 0.3s ease; /* Smooth arrow animation */
+}
+
+.grid-link:hover::after {
+    transform: translateX(5px); /* Move arrow to the right */
+}
+
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: linear-gradient(to right, 
+            rgb(0, 0, 0),  /* Dark blue fades out quickly */
+            rgb(64, 62, 62) ,          
+            rgb(0,0,0)   /* Dark blue appears only at the right edge */
+        );
+    color: #ffffff; /* White text */
+    padding: 20px 0; /* Add padding */
+    text-align: center; /* Center-align content */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space out copyright, links, and arrow */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Limit width for large screens */
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 20px; /* Add padding */
+}
+
+/* Copyright */
+.copyright p {
+    font-size: 14px;
+    margin: 0; /* Remove default margin */
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.footer-links a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-links a:hover {
+    color: #08f8f8; /* Red text on hover */
+}
+
+/* Back-to-Top Link */
+.back-to-top {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: #ffffff; /* White text */
+    background-color: #0d1dfc;
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Larger size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.back-to-top:hover {
+    color: #ff6b6b; /* Red text on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+/* Responsive Navigation for Tablets */
+@media screen and (max-width: 1024px) {
+    .navbar{
+        position: relative;
+    }
+    
+    .nav-container {
+        flex-direction: column; 
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center; 
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 5px 10px;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .slider-images img {
+        width: 100%;
+        height: 370px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .notice-section {
+        width: 70%;
+    }
+
+    .login-section {
+        width: 30%;
+    }
+
+    .quick-links-header {
+        font-size: 18px;
+    }
+    .quick-links-list li a{
+        font-size: 13px;
+    }
+
+    .about-college-header {
+        font-size: 18px;
+    }
+
+    .college-text p{
+        font-size: 13px;
+    }
+
+    .college-image {
+        width: 50%; /* Half the width of the first sector */
+        height: 180px; /* Maintain aspect ratio */
+    }
+
+    .remaining-content {
+        padding: 10px; /* Add padding */
+        border-radius: 10px; /* Rounded corners */
+        gap: 15px; /* Space between grid items */
+    }
+    
+    /* Grid Items */
+    .grid-item {
+        padding: 7px; /* Add padding */
+    }
+    
+    /* Hover Effect for Grid Items */
+    .grid-item:hover {
+        transform: translateY(-3px); /* Lift effect */
+    }
+    
+    /* Grid Header */
+    .grid-header {
+        font-size: 14px;
+        padding: 6px 10px; /* Add padding */
+        border-radius: 5px; /* Rounded corners */
+        margin-bottom: 8px; /* Space below the header */
+    }
+    
+    /* Grid Icon */
+    .grid-icon {
+        font-size: 20px; /* Large icon size */
+        margin-bottom: 4px; /* Space below the icon */
+        width: 40px; /* Set a fixed width */
+        height: 40px; /* Set a fixed height */
+    }
+    
+    /* Hover Effect for Icon */
+    .grid-item:hover .grid-icon {
+        transform: scale(0.7); /* Enlarge icon on hover */
+    }
+    
+    /* Grid Link */
+    .grid-link {
+        font-size: 12px;
+        gap: 3px; /* Space between text and arrow */
+    }
+    
+    .footer-links {
+        gap: 10px; /* Reduce space between links */
+    }
+
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    /* Copyright */
+    .copyright p {
+        font-size: 12px;
+    }
+
+    /* Footer Links */
+    .footer-links {
+        gap: 15px; /* Space between links */
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+}
+
+
+
+/* Responsive Navigation for Mobile */
+@media screen and (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: rgb(51, 51, 122);
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 0;
+        margin: 0;
+        display: none;
+        background: white;
+    }
+
+    /* Show menu when active */
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        margin: 1px;
+        border-radius: 5px;
+        background: linear-gradient(to top, rgb(186, 186, 236) 2%, white 35%, white 65%, rgb(186, 186, 236) 98%);
+    }
+
+    .navbar ul li a {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .slider-images img {
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    /* Full-width Container */
+    .full-width-container {
+        flex-direction: column; /* Stack sections vertically */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    /* Notice Section */
+    .notice-section {
+        width: 100%; /* Take full width */
+        height: 100px; /* Allow height to adjust based on content */
+    }
+
+    /* Notice Content Heading */
+    .notice-content h3 {
+        font-size: 13px; /* Smaller font size for mobile */
+        padding: 8px 10px; /* Adjust padding */
+    }
+
+    /* Scrolling Text */
+    .scrolling-text p {
+        font-size: 16px; /* Smaller font size for mobile */
+        padding-left: 0%; /* Adjust scrolling start position */
+    }
+
+    /* Login Section */
+    .login-section {
+        width: 100%; /* Take full width */
+        height: auto; /* Allow height to adjust based on content */
+        justify-content: center; /* Center the login button */
+        padding: 10px 20px; /* Add padding */
+        background: linear-gradient(to right, #37eb79, #e4e5e7, #37eb79); /* Adjust gradient */
+    }
+
+    /* Login Button */
+    .login-btn {
+        font-size: 16px; /* Smaller font size for mobile */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    /* Login Icon */
+    .login-section .section-icon {
+        margin-right: 15px; /* Reduce space between icon and button */
+        height: 70px;
+        width: 70px;
+    }
+
+    /* Full-width Container */
+    .full-width-container2 {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 10px 0; /* Reduce padding */
+    }
+
+    /* Centered Inner Container */
+    .inner-container {
+        width: 90%; /* Full width */
+        flex-direction: column; /* Stack sectors vertically */
+        gap: 10px; /* Reduce gap between sectors */
+    }
+
+    /* Sectors */
+    .sector {
+        width: 100%; /* Full width */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    /* About College Content */
+    .about-college-content {
+        display: flex;
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    /* College Image */
+    .college-image {
+        width: 100%; /* Full width */
+        height: 250px; /* Maintain aspect ratio */
+        float: none; /* Remove float */
+        margin-right: 0; /* Remove margin */
+        margin-bottom: 20px; /* Add space below the image */
+    }
+
+    /* College Text */
+    .college-text p {
+        text-align: left; /* Align text to the left */
+        text-align: justify;
+    }
+
+    /* Remaining Content */
+    .remaining-content {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto; /* Auto rows */
+        gap: 10px; /* Reduce gap between grid items */
+    }
+
+    /* Grid Items */
+    .grid-item {
+        width: 100%; /* Full width */
+    }
+
+    .footer-content {
+        gap: 5px; /* Reduce space between copyright and links */
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 5px; /* Reduce space between links */
+    }
+
+    .footer-content {
+        display: block;
+        flex-direction: row;
+        justify-content: space-between; /* Space out copyright, links, and arrow */
+        align-items: center; /* Vertically center items */
+    }
+
+     /* Copyright */
+     .copyright p {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+    
+ 
+    
+}

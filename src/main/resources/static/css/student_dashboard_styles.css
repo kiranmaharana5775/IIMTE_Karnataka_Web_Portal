@@ -1,0 +1,707 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set full height for the body and html */
+  html, body {
+    height: 100%;
+  }
+  
+  /* Center the container */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, 
+      rgb(148, 148, 212),  /* Dark blue fades out quickly */
+      rgb(216, 198, 198) ,          
+      rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
+    ); /* Light background for contrast */
+  }
+  
+  /* Container styling */
+  .container {
+    width: 70%;
+    height: 80%;
+    background-color: #ffffff; /* White background */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Shadow effect */
+    display: flex; /* Use flexbox for layout */
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 25%; /* Sidebar takes 25% of the container width */
+    margin: 20px; /* Margin inside the sidebar */
+    background: linear-gradient(to right, 
+      rgb(148, 148, 212),  /* Dark blue fades out quickly */
+      rgb(162, 162, 210) ,          
+      rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
+    ); /* Light background for contrast */
+    border-radius: 20px; /* Rounded corners on the left side */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7); /* Shadow on the right side */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* For positioning the logout button */
+  }
+  
+  /* Image container styling */
+  .image-container {
+    width: 60%; /* 60% width of the sidebar */
+    aspect-ratio: 1; /* Makes it a square (equal width and height) */
+    background: linear-gradient(to right, 
+      rgb(91, 91, 216),  /* Dark blue fades out quickly */
+      rgb(129, 129, 206) ,          
+      rgb(91, 91, 216)   /* Dark blue appears only at the right edge */
+    );
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px; /* Space between image container and list */
+  }
+  
+  /* Image styling */
+  .image-container img {
+    width: 90%; /* Adjust image size */
+    height: 90%;
+    border-radius: 20px;
+    /* filter: invert(100%);  */
+  }
+  
+  /* Sidebar menu styling */
+  .sidebar-menu {
+    list-style: none;
+    width: 100%;
+    padding: 0 30px;
+  }
+  
+/* Sidebar menu styling */
+.sidebar-menu li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    transform: translateX(10px); /* Move right on hover */
+  }
+  
+  .sidebar-menu li.selected {
+    background-color: rgba(255, 255, 255, 0.3); /* Highlight selected option */
+    transform: translateX(10px); /* Move right for selected option */
+    font-weight: bold; /* Make text bold */
+  }
+  
+  .sidebar-menu li i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 22px;
+  }
+  
+  /* Logout button styling */
+  .logout-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to right, 
+      #f73030,  /* Dark blue fades out quickly */
+      #ff4d4d ,          
+      #f73030   /* Dark blue appears only at the right edge */
+    );
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #f73030; /* Darker red on hover */
+    transform: translateX(-50%) scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .logout-btn i {
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  /* Main content styling */
+  .main-content {
+    width: 95%; /* Main content takes 95% of the container width */
+    padding: 20px; /* Padding inside the main content */
+    border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
+  }
+  
+  /* User profile container */
+  .user-profile {
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  /* User info styling */
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  /* User image styling */
+  .user-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Makes it round */
+    object-fit: cover; /* Ensures the image fits well */
+    margin-right: 10px;
+    background-color: rgb(91, 91, 216);
+  }
+  
+  /* User name styling */
+  .user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Content container styling */
+  .content-container {
+    width: 100%;
+    height: calc(100% - 90px); /* Remaining height after user-profile */
+    margin-top: 20px; /* Space between user-profile and content-container */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 20px; /* Padding inside the container */
+  }
+
+  /* Welcome Container */
+.welcome-container {
+    width: 100%;
+    height: 125px;
+    margin: 0 auto;
+    background-image: url('./img/background-image.jpg'); /* Add your background image */
+    background: linear-gradient(to right, 
+    rgb(148, 148, 212),  /* Dark blue fades out quickly */
+    rgb(168, 168, 192) ,          
+    rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
+  ); /* Light background for contrast */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Shadow on the right side */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Welcome Text (Left Side) */
+  .welcome-text {
+    color: #fff;
+    z-index: 2;
+  }
+  
+  .welcome-text .date {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  .welcome-text .welcome-message {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .welcome-text .animated-name {
+    color: #ffdd57; /* Highlight color for the name */
+  }
+  
+  /* Welcome Image (Right Side) */
+  .welcome-image {
+    z-index: 2;
+  }
+  
+  .welcome-image img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .welcome-image img:hover {
+    transform: scale(1.05); /* Smooth hover effect */
+  }
+  
+  /* Overlay for better text readability */
+  .welcome-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, 
+    rgb(148, 148, 212),  /* Dark blue fades out quickly */
+    rgb(168, 168, 192) ,          
+    rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
+  ); /* Light background for contrast */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Shadow on the right side */
+    z-index: 1;
+  }
+  .academic-details-container {
+    width: 100%;
+    margin-top: 10px; /* Space between welcome container and this container */
+    background: linear-gradient(to right, 
+      rgb(148, 148, 212),  /* Dark blue fades out quickly */
+      rgb(168, 168, 192) ,          
+      rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
+    ); /* Light background for contrast */
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Shadow on the right side */
+    padding: 20px;
+  }
+
+/* Academic Details Container */
+.personal-details-container {
+  width: 100%;
+  margin-top: 10px; /* Space between welcome container and this container */
+  background: linear-gradient(to right, 
+    rgb(148, 148, 212),  /* Dark blue fades out quickly */
+    rgb(168, 168, 192) ,          
+    rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
+  ); /* Light background for contrast */
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Shadow on the right side */
+  padding: 20px;
+}
+
+
+/* Academic Header */
+.academic-header {
+  margin-bottom: 10px; /* Space below the header */
+}
+
+.academic-header h2 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px 0; /* Space below the header */
+}
+
+/* Beautiful Underline */
+.academic-header .underline {
+  width: 160px; /* Width of the underline */
+  height: 2px; /* Thickness of the underline */
+  background-color: #ffffff; /* Yellow color for the underline */
+  border-radius: 2px; /* Rounded corners for the underline */
+}
+
+/* Academic Content */
+.academic-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  gap: 40px; /* 40px gap between labels and details */
+  margin: 0 70px;
+}
+
+/* Left Side: Labels */
+.labels {
+  flex: 1; /* Take up remaining space */
+
+}
+
+.labels p {
+  font-size: 18px;
+  color: #ffffff; /* White color for labels */
+  margin: 10px 0; 
+  font-weight: 300; /* Medium font weight */
+  text-transform: uppercase;
+}
+
+/* Right Side: Details */
+.details {
+  flex: 1; /* Take up remaining space */
+  text-align: left; /* Align text to the left */
+}
+
+.details p {
+  font-size: 18px;
+  color: #0612f7; /* Yellow color for details */
+  margin: 10px 0; 
+  text-transform: uppercase; /* Convert text to uppercase */
+  font-weight: 300; /* Light font weight */
+}
+
+
+/* Result container styling */
+.result-container {
+  background-image: url("../img/result background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  width: 100%; /* Full width */
+  height: 600px; /* Remaining height (adjust based on your layout) */
+  border: 1px solid #ddd; /* Border for visibility */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  color: #666; /* Gray text color */
+  margin-top: 15px ; /* Space between selection container and result container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+}
+
+
+.selection-container {
+  width: 40%;
+  height: 300px;
+  background: linear-gradient(to right, 
+  rgba(107, 107, 213),  /* Dark blue fades out quickly */
+  rgba(143, 143, 210) ,          
+  rgb(107, 107, 213)   /* Dark blue appears only at the right edge */
+); 
+
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(29, 29, 29, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+  padding: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+  margin: 0 auto;
+}
+
+
+/* Header wrapper for result-header */
+.header-wrapper {
+  width: 100%; /* Full width */
+  margin-bottom: 10px; /* Space between header and other elements */
+}
+
+/* CSS for result-header */
+.result-header {
+  font-size: 21px;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+  margin: 0; 
+  text-decoration: underline;
+}
+
+/* Label styling */
+.selection-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+}
+
+.semester-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between label and dropdown */
+  width: 130px; /* Adjust width as needed */
+}
+
+.semester-dropdown {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #1736e6;
+  background-color: white;
+  cursor: pointer;
+}
+
+.semester-dropdown:hover {
+  background-color: rgba(255, 255, 255, 1); /* Fully white on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+.show-result-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #0c08f5; /* Coral color */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.show-result-button:hover {
+  background-color: #ff4a3d; /* Darker coral on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.show-result-button:active {
+  transform: translateY(0); /* Reset lift on click */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+  display: none; /* Initially hidden */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  /* Keyframes for zoom-in and zoom-out animation */
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1); /* Normal size */
+    }
+    50% {
+      transform: scale(1.1); /* Zoom in */
+    }
+    100% {
+      transform: scale(1); /* Zoom out */
+    }
+  }
+  
+  /* Responsive Styles */
+@media (max-width: 1200px) {
+  /* Adjust container width for smaller screens */
+  .container {
+    width: 90%;
+    height: 54%;
+  }
+  
+  .result-container{
+	  height: 540px;
+  }
+  
+  .selection-container {
+    width: 50%;
+    }
+
+  /* Reduce sidebar width */
+  .sidebar {
+    width: 30%;
+  }
+
+  /* Adjust font sizes for smaller screens */
+  .user-name {
+    font-size: 16px;
+  }
+
+  .welcome-text .welcome-message {
+    font-size: 18px;
+  }
+
+  .welcome-text .date {
+    font-size: 16px;
+  }
+
+  .academic-header h2 {
+    font-size: 20px;
+  }
+
+  .labels p,
+  .details p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Stack sidebar and main content vertically */
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .selection-container {
+    width: 60%;
+    }
+
+  .sidebar {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .main-content {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  /* Adjust image container size */
+  .image-container {
+    width: 40%;
+    margin: 15px;
+  }
+
+  /* Center user profile */
+  .user-profile {
+    justify-content: center;
+  }
+
+  /* Adjust welcome container layout */
+  .welcome-container {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .welcome-text {
+    margin-bottom: 20px;
+  }
+
+  .welcome-image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Adjust academic and personal details layout */
+  .academic-content {
+    flex-direction: row;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .labels,
+  .details {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Further reduce font sizes */
+  .selection-container {
+    width: 70%;
+    }
+  
+  .user-name {
+    font-size: 14px;
+  }
+
+  .welcome-text .welcome-message {
+    font-size: 20px;
+  }
+
+  .welcome-text .date {
+    font-size: 14px;
+  }
+
+  .academic-header h2 {
+    font-size: 18px;
+  }
+
+  .labels p,
+  .details p {
+    font-size: 14px;
+  }
+
+  /* Adjust image container size */
+  .image-container {
+    width: 50%;
+  }
+
+  /* Reduce padding in content container */
+  .content-container {
+    padding: 10px;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  /* Adjust container width for very small screens */
+  .container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  
+ .selection-container {
+    width: 80%;
+    }
+
+  /* Hide sidebar image on very small screens */
+  .image-container {
+    display: none;
+  }
+
+  /* Adjust sidebar menu padding */
+  .sidebar-menu {
+    height: 320px;
+    padding: 0 10px;
+  }
+
+  /* Reduce font sizes further */
+  .user-name {
+    font-size: 12px;
+  }
+
+  .welcome-text .welcome-message {
+    font-size: 14px;
+  }
+
+  .welcome-text .date {
+    font-size: 12px;
+  }
+
+  .academic-header h2 {
+    font-size: 16px;
+  }
+
+  .labels p,
+  .details p {
+    font-size: 12px;
+  }
+
+  /* Adjust logout button size */
+  .logout-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    bottom: 15px;
+  }
+}
