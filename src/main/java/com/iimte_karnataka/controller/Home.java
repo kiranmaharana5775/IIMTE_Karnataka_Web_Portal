@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Home {
-	
+
 	 // Default route to display the login page
-    @GetMapping("/home")
+    @GetMapping("/")
     public String showLoginPage() {
         return "index"; // Corresponds to login.jsp
     }
