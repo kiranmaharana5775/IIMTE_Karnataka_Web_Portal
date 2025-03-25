@@ -1,26 +1,20 @@
-# First Stage: Build the application
+# Stage 1: Build the application
 FROM maven:3.8.5-openjdk-17 AS build
-
-# Set working directory
 WORKDIR /app
-
-# Copy project files
 COPY . .
-
-# Build the Spring Boot application
 RUN mvn clean package -DskipTests
 
-# Second Stage: Run the application
-FROM openjdk:17.0.1-jdk-slim
+# Stage 2: Run the application with Tomcat
+FROM tomcat:9.0-jdk17
 
-# Set working directory
-WORKDIR /app
+# Remove default ROOT application
+RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
-# Copy the built JAR from the build stage
-COPY --from=build /app/target/IIMTE_Karnataka-0.0.1-SNAPSHOT.jar /app/IIMTE_Karnataka.jar
+# Copy WAR file from build stage
+COPY --from=build /app/target/IIMTE_Karnataka.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose port
 EXPOSE 8080
 
-# Run the application
-ENTRYPOINT ["java", "-jar", "/app/IIMTE_Karnataka.jar"]
+# Start Tomcat
+CMD ["catalina.sh", "run"]
