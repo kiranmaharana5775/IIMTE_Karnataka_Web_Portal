@@ -208,7 +208,7 @@
                         <li><a href="#">AIU Evaluation</a></li>
                         <li><a href="#">Interim Report of the Oversight Committee</a></li>
                         <li><a href="#">Minority Education</a></li>
-                        <li><a href="#">Open Schooling Issues & Challenges</a></li>
+                        <li><a href="#">Open Schooling Issues and Challenges</a></li>
                         <li><a href="#">Open Schooling</a></li>
                         <li><a href="#">Quality in School Education</a></li>
                         <li><a href="#">VOS-NGOs for the Welfare of OBC</a></li>
