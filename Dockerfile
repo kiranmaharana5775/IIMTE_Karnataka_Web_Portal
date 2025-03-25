@@ -17,10 +17,10 @@ FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
 
 # Copy the built JAR from the build stage
-COPY --from=build /app/target/IIMTE_Karnataka-0.0.1-SNAPSHOT.jar /app/IIMTE_Karnataka.jar
+COPY --from=build /app/target/IIMTE_Karnataka-0.0.1-SNAPSHOT.war /app/IIMTE_Karnataka.war
 
 # Expose port
 EXPOSE 8080
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "/app/IIMTE_Karnataka.jar"]
+ENTRYPOINT ["java", "-jar", "/app/IIMTE_Karnataka.war"]
