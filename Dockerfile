@@ -25,4 +25,4 @@ COPY --from=build /app/target/IIMTE_Karnataka-0.0.1-SNAPSHOT.jar .
 EXPOSE 8080
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "/app/IIMTE_Karnataka.jar"]
+ENTRYPOINT ["java", "-jar", "/app/IIMTE_Karnataka-0.0.1-SNAPSHOT.jar"]
