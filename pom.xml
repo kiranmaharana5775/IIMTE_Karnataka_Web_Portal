@@ -11,6 +11,7 @@
 	<groupId>com.iimte_karnataka</groupId>
 	<artifactId>IIMTE_Karnataka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>IIMTE_Karnataka</name>
 	<description>Web Portal of IIMTE Karnataka</description>
 	<url/>
