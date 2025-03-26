@@ -24,7 +24,7 @@
         
                     <!-- Navigation Menu -->
                     <ul class="nav-menu">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="home" style = "background-color: rgb(51, 51, 122); color: white; border-radius: 5px">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Academic</a></li>
                         <li><a href="#">Students Zone</a></li>
@@ -197,30 +197,30 @@
 
                     <!-- Bullet Links -->
                     <ul class="quick-links-list">
-                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/MHRD-Notification.pdf" target="_blank">MHRD Notification</a></li>
-                        <li><a href="#">MHRD Application</a></li>
-                        <li><a href="#">UGC Notification</a></li>
-                        <li><a href="#">UGC Notification-2</a></li>
-                        <li><a href="#">High Court Decision RCI Regulation</a></li>
-                        <li><a href="#">National Education Policy 1986</a></li>
-                        <li><a href="#">NVE Qualification Order</a></li>
-                        <li><a href="#">Accreditation for Higher Education</a></li>
-                        <li><a href="#">AIU Evaluation</a></li>
-                        <li><a href="#">Interim Report of the Oversight Committee</a></li>
-                        <li><a href="#">Minority Education</a></li>
-                        <li><a href="#">Open Schooling Issues and Challenges</a></li>
-                        <li><a href="#">Open Schooling</a></li>
-                        <li><a href="#">Quality in School Education</a></li>
-                        <li><a href="#">VOS-NGOs for the Welfare of OBC</a></li>
-                        <li><a href="#">UGC Notification</a></li>
-                        <li><a href="#">Assistance to Voluntary Agencies</a></li>
-                        <li><a href="#">IDMI Scheme</a></li>
-                        <li><a href="#">National Policy on Education</a></li>
-                        <li><a href="#">Recognition of Certificate</a></li>
-                        <li><a href="#">Scheme of Vocationalisation of Secondary Education</a></li>
-                        <li><a href="#">UGC Notification for ODL Degrees</a></li>
-                        <li><a href="#">RTI</a></li>
-                        <li><a href="#">UGC FAKE LIST</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/MHRD-Notification.pdf" target="_blank" target="_blank">MHRD Notification</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2018/12/copyright0031.jpg" target="_blank">MHRD Application</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/UGC-NOTIFICATION.pdf" target="_blank">UGC Notification</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/UGC-notification-2.pdf" target="_blank">UGC Notification-2</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/HIGHCOURT-DECISION-RCI-REGULATION.pdf" target="_blank">High Court Decision RCI Regulation</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/NATIONAL-EDUCATION-POLICY-1986.pdf" target="_blank">National Education Policy 1986</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/NATIONAL-VOCATIONAL-EDUCATION-QUALIFICATION-ORDER.pdf" target="_blank">NVE Qualification Order</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/ACCREDITATION-FOR-HIGHER-EDUCATION.pdf" target="_blank">Accreditation for Higher Education</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/AIU-EVALUATION.pdf" target="_blank">AIU Evaluation</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/INTERIM-REPORT-OF-THE-OVERSIGHT-COMMITTEE.pdf" target="_blank">Interim Report of the Oversight Committee</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/MINORITY-EDUCATION.pdf" target="_blank">Minority Education</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/OPEN-SCHOOLING-ISSUES-AND-CHALLENGES.pdf" target="_blank">Open Schooling Issues and Challenges</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/OPEN-SCHOOLING.pdf" target="_blank">Open Schooling</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/QUALITY-IN-SCHOOL-EDUCATION.pdf" target="_blank">Quality in School Education</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/SCHEME-OF-ASSISTANCE-TO-VOS-NGOS-FOR-THE-WELFARE-OF-OBC.pdf" target="_blank">VOS-NGOs for the Welfare of OBC</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/UGC-NOTIFICATION-2.pdf" target="_blank">UGC Notification</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/ASSISTANCE-TO-VOLUNTARY-AGENCIES.pdf" target="_blank">Assistance to Voluntary Agencies</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/IDMI-SCHEME.pdf" target="_blank">IDMI Scheme</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/NATIONAL-POLICY-ON-EDUCATION.pdf" target="_blank">National Policy on Education</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/RECOGNITION-OF-CERTIFICATE.pdf" target="_blank">Recognition of Certificate</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/SCHEME-OF-VOCATIONALISATION-OF-SECONDARY-EDUCATION.pdf" target="_blank">Scheme of Vocationalisation of Secondary Education</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/01/UGC-NOTIFICATION-FOR-ODL-DEGREES.pdf" target="_blank">UGC Notification for ODL Degrees</a></li>
+                        <li><a href="https://iimte.ac.in/wp-content/uploads/2019/02/rti.pdf" target="_blank">RTI</a></li>
+                        <li><a href="#" target="_blank">UGC FAKE LIST</a></li>
                     </ul>
                 </div>
                 
