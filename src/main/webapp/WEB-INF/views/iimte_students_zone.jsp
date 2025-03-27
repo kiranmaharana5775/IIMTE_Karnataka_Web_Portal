@@ -35,6 +35,80 @@
                 </div>
             </nav>
         </div>
+        
+        <div class="main-content">
+            <div class="container">
+                <div class="form-card">
+                    <a href="https://iimte.ac.in/wp-content/uploads/2018/12/admission-form.pdf" target="_blank">
+                        <img src="./img/pdficon.png" alt="PDF">
+                    </a>
+                    <p>Admission Cum Examination Form</p>
+                </div>
+                
+                <div class="form-card">
+                    <a href="https://iimte.ac.in/wp-content/uploads/2018/12/application-for-convocation.pdf" target="_blank">
+                        <img src="./img/pdficon.png" alt="PDF">
+                    </a>
+                    <p>Application Form for Convocation Certificate</p>
+                </div>
+                
+                <div class="form-card">
+                    <a href="https://iimte.ac.in/wp-content/uploads/2018/12/APPLICATION-FORM-FOR-MIGRATION-CERTIFICATE.pdf" target="_blank">
+                        <img src="./img/pdficon.png" alt="PDF">
+                    </a>
+                    <p>Application Form for Migration Certificate</p>
+                </div>
+                
+                <div class="form-card">
+                    <a href="https://iimte.ac.in/wp-content/uploads/2018/12/APPLICATION-FORM-FOR-PROVISIONAL-CERTIFICATE.pdf" target="_blank">
+                        <img src="./img/pdficon.png" alt="PDF">
+                    </a>
+                    <p>Application Form for Provisional Certificate</p>
+                </div>
+                
+                <div class="form-card">
+                    <a href="https://iimte.ac.in/wp-content/uploads/2018/12/Scholarship-Application-Form.pdf" target="_blank">
+                        <img src="./img/pdficon.png" alt="PDF">
+                    </a>
+                    <p>Scholarship Application Form</p>
+                </div>
+                
+                <div class="form-card">
+                    <a href="https://iimte.ac.in/wp-content/uploads/2018/12/verification-form.pdf" target="_blank">
+                        <img src="./img/pdficon.png" alt="PDF">
+                    </a>
+                    <p>Verification Form for Student only</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- Footer Content -->
+            <div class="footer-content">
+                <!-- Copyright -->
+                <div class="copyright">
+                    <p>Copyright © 2025, Indian Institute of Management and Technical Education</p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about_us.html">About Us</a>
+                    <a href="programmes.html">Programs</a>
+                    <a href="student_zone.html">Student Zone</a>
+                    <a href="">Accreditations</a>
+                    <a href="apply.html">Apply</a>
+                    <a href="contact_us.html">Contact Us</a>
+                    <a href="student_login.html" target="_blank">Center Login</a>
+                </div>
+
+                <!-- Back-to-Top Link -->
+                <a href="student_zone.html" class="back-to-top">↑</a>
+            </div>
+        </footer>
+        
 	<script src="./js/iimte_students_zone_script.js"></script>
 	</body>
 </html>
