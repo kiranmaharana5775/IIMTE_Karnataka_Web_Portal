@@ -823,7 +823,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding: 15px 20px;
+        padding: 20px 20px;
         position: relative;
     }
 
@@ -841,7 +841,7 @@
 
     .navbar ul {
         position: absolute;
-        top: 50px;
+        top: 41px;
         left: 0;
         width: 100%;
         flex-direction: column;

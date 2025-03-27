@@ -19,10 +19,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
     background-image: url("../img/certificate_bg.png");
-    background-blend-mode: multiply;
     object-fit: cover;
     border: 1px solid #c2b6b6;
-    background-size: contain;
+    background-size: cover;
     opacity: 1; 
 }
 
@@ -205,7 +204,7 @@ td {
         position: relative;
         margin: 20px auto; /* 20px margin on top & bottom, auto centers horizontally */
         padding: 20px; /* Adds spacing inside the container */
-        width: 90%; /* Ensures 20px gap on both left & right */
+        width: max-content; /* Ensures 20px gap on both left & right */
         max-width: 1000px;
         background-image: url("images/certificate_bg.png");
         background-size: cover; /* Ensures the background image fully stretches */
@@ -216,17 +215,19 @@ td {
     
     .header {
         display: flex;
+        flex-direction: row;
         align-items: center; /* Align logo and text properly */
         justify-content: space-between; /* Push items to the edges */
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         position: relative;
         z-index: 0;
     }
 
     /* Logo - Align on the left */
     .logo {
-        max-width: 110px;
+        max-width: 150px;
         margin-top: 10px;
+        margin-left: 10px;
     }
 
     /* College name - Align on the right */
@@ -234,7 +235,8 @@ td {
         max-width: 730px;
         width: 80%;
         text-align: right; /* Align text to the right */
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        margin-top:20px;
         mix-blend-mode: multiply;
     }
 
@@ -242,7 +244,7 @@ td {
 	    display: flex;
 	    justify-content: space-between;
 	    align-items: start;
-	    margin-bottom: 20px;
+	    margin-bottom: 40px;
 	    gap: 40px; 
 	}
 	
@@ -264,7 +266,7 @@ td {
 	.label {
 	    font-weight: bold;
 	    min-width: 130px; 
-	    margin-left: 20px;
+	    margin-left: 40px;
 	    margin-top: 10px;
 	    text-align: left;
 	    display: flex;
@@ -291,6 +293,8 @@ td {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+
+    
     .header {
         flex-direction: column;
         text-align: center;
@@ -334,7 +338,7 @@ td {
 @media screen and (max-width: 480px) {
     .container {
         padding: 15px;
-        width: 180%;
+        width: max-content;
     }
 
     .statement {

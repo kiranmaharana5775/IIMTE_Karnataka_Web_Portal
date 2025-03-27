@@ -25,12 +25,12 @@
                     <!-- Navigation Menu -->
                     <ul class="nav-menu">
                         <li><a href="home" style = "background-color: rgb(51, 51, 122); color: white; border-radius: 5px">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Academic</a></li>
-                        <li><a href="#">Students Zone</a></li>
-                        <li><a href="#">Programmes</a></li>
-                        <li><a href="#">Apply</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="about_us">About Us</a></li>
+                        <li><a href="academic">Academic</a></li>
+                        <li><a href="students_zone">Students Zone</a></li>
+                        <li><a href="programmes">Programmes</a></li>
+                        <li><a href="apply">Apply</a></li>
+                        <li><a href="contact_us">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
@@ -238,18 +238,18 @@
 
                 <!-- Navigation Links -->
                 <div class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Programs</a>
-                    <a href="#">Student Zone</a>
+                    <a href="home">Home</a>
+                    <a href="about_us">About Us</a>
+                    <a href="programmes">Programs</a>
+                    <a href="students_zone">Student Zone</a>
                     <a href="#">Accreditations</a>
-                    <a href="#">Apply</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Center Login</a>
+                    <a href="apply">Apply</a>
+                    <a href="contact_us">Contact Us</a>
+                    <a href="student_login">Center Login</a>
                 </div>
 
                 <!-- Back-to-Top Link -->
-                <a href="#" class="back-to-top">↑</a>
+                <a href="home" class="back-to-top">↑</a>
             </div>
         </footer>
         <script src="./js/index_script.js"></script>

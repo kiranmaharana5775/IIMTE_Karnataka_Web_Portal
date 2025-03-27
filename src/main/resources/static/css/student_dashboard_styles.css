@@ -638,7 +638,7 @@
 
   .labels p,
   .details p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   /* Adjust image container size */
@@ -695,7 +695,7 @@
 
   .labels p,
   .details p {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   /* Adjust logout button size */
