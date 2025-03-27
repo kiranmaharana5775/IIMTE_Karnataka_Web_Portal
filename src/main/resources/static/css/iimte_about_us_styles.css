@@ -94,6 +94,139 @@
     object-fit: contain;
 }
 
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    gap: 20px;
+    background: linear-gradient(to right, 
+    rgb(148, 148, 212) 2%,  
+    white 20%,            
+    white 80%,            
+    rgb(148, 148, 212) 98%);
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content {
+    width: 80%;
+    padding: 20px;
+    padding-bottom: 5px;
+    text-align: justify;
+    font-size: 18px;
+    color: #272727; /* Dark text color */
+    line-height: 1.6; /* Improve readability */
+    overflow: hidden; /* Clear the float */
+    background: linear-gradient(to right, rgb(233, 235, 233), #efecec , rgb(233, 235, 233));
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 6px ;
+}
+.sidebar {
+    margin: auto;
+    width: 80%;
+    text-align: justify;
+    background-color: #fff;
+    font-size: 18px;
+    color: #272727; /* Dark text color */
+    line-height: 1.6; /* Improve readability */
+    overflow: hidden; /* Clear the float */
+    padding: 20px;
+    background: linear-gradient(to right, rgb(233, 235, 233), #efecec, rgb(233, 235, 233));
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 6px ;
+}
+.sidebar h2 {
+    text-decoration: underline;
+    color: #0253f6;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: zoomInOut 1s infinite;
+}
+
+
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: linear-gradient(to right, 
+            rgb(0, 0, 0),  /* Dark blue fades out quickly */
+            rgb(64, 62, 62) ,          
+            rgb(0,0,0)   /* Dark blue appears only at the right edge */
+        );
+    color: #ffffff; /* White text */
+    padding: 20px 0; /* Add padding */
+    text-align: center; /* Center-align content */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space out copyright, links, and arrow */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Limit width for large screens */
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 20px; /* Add padding */
+}
+
+/* Copyright */
+.copyright p {
+    font-size: 14px;
+    margin: 0; /* Remove default margin */
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.footer-links a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-links a:hover {
+    color: #08f8f8; /* Red text on hover */
+}
+
+/* Back-to-Top Link */
+.back-to-top {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: #ffffff; /* White text */
+    background-color: #0d1dfc;
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Larger size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.back-to-top:hover {
+    color: #ff6b6b; /* Red text on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+ /* Keyframes for zoom-in and zoom-out animation */
+ @keyframes zoomInOut {
+    0% {
+      transform: scale(1); /* Normal size */
+    }
+    50% {
+      transform: scale(1.1); /* Zoom in */
+    }
+    100% {
+      transform: scale(1); /* Zoom out */
+    }
+  }
+
 /* Responsive Navigation for Tablets */
 @media screen and (max-width: 1024px) {
     .navbar{
@@ -120,6 +253,16 @@
         padding: 8px 12px;
     }
 
+	 .sidebar h2{
+        font-size: 17px;
+    }
+
+    .content, .sidebar {
+        width: 80%;
+        font-size: 16px;
+    }
+
+	
     .footer-links {
         gap: 10px; /* Reduce space between links */
     }
@@ -210,6 +353,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    
+    .container {
+        width: 100%;
+        font-size: 15px;
+        flex-direction: column;
+    }
+
+    .content, .sidebar {
+        width: 97%;
     }
 
     .footer-content {
