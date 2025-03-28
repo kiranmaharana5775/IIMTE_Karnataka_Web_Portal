@@ -117,7 +117,7 @@
                 </div>
 
                 <!-- Back-to-Top Link -->
-                <a href="about_us" class="back-to-top">↑</a>
+                <a href="contact_us" class="back-to-top">↑</a>
             </div>
         </footer>
         

@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-@charset "UTF-8";
 
 /* Reset some default styles */
 * {
@@ -96,6 +95,134 @@
     object-fit: contain;
 }
 
+
+.container {
+    
+    width: 100%;
+    flex: 1;
+     background: linear-gradient(to right, 
+            rgb(148, 148, 212) ,  
+            rgb(239, 216, 216) ,            
+            rgb(148, 148, 212) );
+    padding: 20px;
+}
+.section {
+    background: linear-gradient(to right, rgb(235, 242, 242), #ffffff, rgb(235, 242, 242)); /* Adjust gradient */
+    text-align: justify;
+    max-width: 60%;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(110, 110, 224, 0.8);
+}
+.section h2 {
+    background: linear-gradient(to right, #699acc, #1e65ae, #699acc); /* Adjust gradient */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    animation: zoomInOut 2s infinite;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size:18px;
+}
+.content img {
+    height: 250px;
+    width: 300px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.text {
+    margin-top: 5px;
+    width: 71%;
+}
+.full-width-text {
+    font-size:18px;
+}
+/* Footer */
+.footer {
+    width: 100%;
+    background: linear-gradient(to right, 
+            rgb(0, 0, 0),  /* Dark blue fades out quickly */
+            rgb(64, 62, 62) ,          
+            rgb(0,0,0)   /* Dark blue appears only at the right edge */
+        );
+    color: #ffffff; /* White text */
+    padding: 20px 0; /* Add padding */
+    text-align: center; /* Center-align content */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space out copyright, links, and arrow */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Limit width for large screens */
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 20px; /* Add padding */
+}
+
+/* Copyright */
+.copyright p {
+    font-size: 14px;
+    margin: 0; /* Remove default margin */
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.footer-links a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-links a:hover {
+    color: #08f8f8; /* Red text on hover */
+}
+
+
+/* Back-to-Top Link */
+.back-to-top {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: #ffffff; /* White text */
+    background-color: #0d1dfc;
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Larger size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.back-to-top:hover {
+    color: #ff6b6b; /* Red text on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+
+ /* Keyframes for zoom-in and zoom-out animation */
+ @keyframes zoomInOut {
+    0% {
+      transform: scale(1); /* Normal size */
+    }
+    50% {
+      transform: scale(0.97); /* Zoom in */
+    }
+    100% {
+      transform: scale(1); /* Zoom out */
+    }
+  }
+
+
+
 /* Responsive Navigation for Tablets */
 @media screen and (max-width: 1024px) {
     .navbar{
@@ -121,7 +248,11 @@
         font-size: 16px;
         padding: 8px 12px;
     }
-
+	
+	 .section {
+        max-width: 90%;
+    }
+	
     .footer-links {
         gap: 10px; /* Reduce space between links */
     }
@@ -213,6 +344,28 @@
         align-items: center;
         justify-content: center;
     }
+    
+     .section {
+        max-width: 100%; /* Increase width for better readability */
+        padding: 15px;
+    }
+    .content {
+        flex-direction: column !important; /* Stack image and text vertically */
+        text-align: justify;
+    }
+    .section h2{
+       background: #1e65ae;
+       font-size: 20px;
+    }
+    .content img {
+        width: 100%; /* Make image responsive */
+        height: auto;
+        margin-top: 10px;
+    }
+    .text {
+        width: 100%; /* Allow text to take full width */
+    }
+
 
     .footer-content {
         gap: 5px; /* Reduce space between copyright and links */
