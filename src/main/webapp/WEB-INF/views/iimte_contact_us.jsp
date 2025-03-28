@@ -8,6 +8,7 @@
         <title>Indian Institute of Management and Technical Education</title>
         <link rel="stylesheet" href="./css/iimte_contact_us_styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="icon" type="image/png" href="./img/college_logo.jpg">
 	</head>
 	<body>
 	<!-- Sticky Outer Container -->

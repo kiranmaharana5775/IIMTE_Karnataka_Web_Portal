@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <title>IIMTE - Student Login</title>
         <link rel="stylesheet" href="./css/student_login_styles.css">
+        <link rel="icon" type="image/png" href="./img/college_logo.jpg">
 	</head>
 	<body>
 		<div class="main-container">

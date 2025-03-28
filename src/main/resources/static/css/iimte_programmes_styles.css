@@ -93,6 +93,170 @@
     object-fit: contain;
 }
 
+.container {
+    flex: 1; /* Take up remaining height */
+    width: 100%;
+    padding: 5px; /* Add padding */
+    background: linear-gradient(to right, 
+            rgb(148, 148, 212) ,  
+            rgb(239, 216, 216) ,            
+            rgb(148, 148, 212) );
+}
+
+.programme-container{
+    width: 70%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: 1fr 1fr; /* Two equal rows */
+    gap: 30px; /* Space between grid items */
+    margin: auto;
+}
+
+/* Grid Items */
+.grid-item {
+    margin: auto;
+    width: 90%;
+    background: linear-gradient(to right, 
+            rgb(184, 184, 224),  /* Dark blue fades out quickly */
+            white ,          
+            rgb(184, 184, 224)   /* Dark blue appears only at the right edge */
+        );
+    padding: 10px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Grid Items */
+.grid-item:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Grid Header */
+.grid-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; /* White text color */
+    background-color: rgb(59, 68, 155); /* Blue background */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below the header */
+    text-align: center;
+    width: 100%; /* Full width */
+}
+
+/* Grid Icon */
+.grid-icon {
+    font-size: 40px; /* Large icon size */
+    margin-bottom: 15px; /* Space below the icon */
+    width: 60px; /* Set a fixed width */
+    height: 60px; /* Set a fixed height */
+    object-fit: contain; /* Ensure the image fits within the dimensions */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Icon */
+.grid-item:hover .grid-icon {
+    transform: scale(1.2); /* Enlarge icon on hover */
+}
+
+/* Grid Link */
+.grid-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0253f6; /* Blue text color */
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between text and arrow */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Link */
+.grid-link:hover {
+    color: #ff6b6b; /* Red text on hover */
+}
+
+/* Arrow Animation */
+.grid-link::after {
+    content: "→";
+    transition: transform 0.3s ease; /* Smooth arrow animation */
+}
+
+.grid-link:hover::after {
+    transform: translateX(5px); /* Move arrow to the right */
+}
+
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: linear-gradient(to right, 
+            rgb(0, 0, 0),  /* Dark blue fades out quickly */
+            rgb(64, 62, 62) ,          
+            rgb(0,0,0)   /* Dark blue appears only at the right edge */
+        );
+    color: #ffffff; /* White text */
+    padding: 20px 0; /* Add padding */
+    text-align: center; /* Center-align content */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space out copyright, links, and arrow */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Limit width for large screens */
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 20px; /* Add padding */
+}
+
+/* Copyright */
+.copyright p {
+    font-size: 14px;
+    margin: 0; /* Remove default margin */
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.footer-links a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-links a:hover {
+    color: #08f8f8; /* Red text on hover */
+}
+
+/* Back-to-Top Link */
+.back-to-top {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: #ffffff; /* White text */
+    background-color: #0d1dfc;
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Larger size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.back-to-top:hover {
+    color: #ff6b6b; /* Red text on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
 /* Responsive Navigation for Tablets */
 @media screen and (max-width: 1024px) {
     .navbar{
@@ -117,6 +281,12 @@
     .navbar ul li a {
         font-size: 16px;
         padding: 8px 12px;
+    }
+    
+    .programme-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .footer-links {
@@ -210,7 +380,16 @@
         align-items: center;
         justify-content: center;
     }
-
+	
+	
+	 .programme-container {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+    .grid-item {
+        width: 100%;
+    }
+	
     .footer-content {
         gap: 5px; /* Reduce space between copyright and links */
     }
@@ -242,4 +421,21 @@
         margin-top: 6px;
     }
  
+}
+
+@media screen and (max-width: 480px) {
+    .programme-container {
+        width: 100%;
+    }
+    .grid-header {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    .grid-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .grid-link {
+        font-size: 14px;
+    }
 }

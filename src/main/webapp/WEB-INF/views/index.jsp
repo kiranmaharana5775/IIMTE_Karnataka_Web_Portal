@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Indian Institute of Management and Technical Education</title>
         <link rel="stylesheet" href="./css/index_styles.css">
+        <link rel="icon" type="image/png" href="./img/college_logo.jpg">
 	</head>
 	<body>
 		<!-- Sticky Outer Container -->
@@ -169,12 +170,12 @@
                         <div class="grid-item">
                             <div class="grid-header">ADMISSION PROCEDURE</div>
                             <img src="./img/admission.png" alt="Icon 1" class="grid-icon">
-                            <a href="#" class="grid-link">Know More →</a>
+                            <a href="academic" class="grid-link">Know More →</a>
                         </div>
                         <div class="grid-item">
                             <div class="grid-header">PROGRAMMES</div>
                             <img src="./img/programmes.png" alt="Icon 2" class="grid-icon">
-                            <a href="#" class="grid-link">Know More →</a>
+                            <a href="programmes" class="grid-link">Know More →</a>
                         </div>
                         <!-- Second Row -->
                         <div class="grid-item">
@@ -245,7 +246,7 @@
                     <a href="#">Accreditations</a>
                     <a href="apply">Apply</a>
                     <a href="contact_us">Contact Us</a>
-                    <a href="student_login">Center Login</a>
+                    <a href="student_login" target="_blank">Center Login</a>
                 </div>
 
                 <!-- Back-to-Top Link -->
