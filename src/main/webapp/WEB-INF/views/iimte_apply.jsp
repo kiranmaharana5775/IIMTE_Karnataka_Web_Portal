@@ -34,6 +34,58 @@
                 </div>
             </nav>
         </div>
+        
+        <div class="main-content">
+            <div class="container">
+                <div class="form-card">
+                    <a href="https://iimte.ac.in/wp-content/uploads/2018/12/verification-form.pdf" target="_blank">
+                        <img src="./img/pdficon.png" alt="PDF">
+                    </a>
+                    <p>Verification Form</p>
+                </div>
+                
+                <div class="form-card">
+                    <a href="https://iimte.ac.in/wp-content/uploads/2018/12/examination-centre-request-form.jpg" target="_blank">
+                        <img src="./img/pdficon.png" alt="PDF">
+                    </a>
+                    <p>Examination Centre Request Form</p>
+                </div>
+                
+                <div class="form-card">
+                    <a href="https://iimte.ac.in/wp-content/uploads/2018/12/affilication-from-center.pdf" target="_blank">
+                        <img src="./img/pdficon.png" alt="PDF">
+                    </a>
+                    <p>Affiliation Form</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- Footer Content -->
+            <div class="footer-content">
+                <!-- Copyright -->
+                <div class="copyright">
+                    <p>Copyright © 2025, Indian Institute of Management and Technical Education</p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="footer-links">
+                    <a href="home">Home</a>
+                    <a href="about_us">About Us</a>
+                    <a href="programmes">Programs</a>
+                    <a href="students_zone">Student Zone</a>
+                    <a href="">Accreditations</a>
+                    <a href="apply">Apply</a>
+                    <a href="contact_us">Contact Us</a>
+                    <a href="student_login" target="_blank">Center Login</a>
+                </div>
+
+                <!-- Back-to-Top Link -->
+                <a href="apply" class="back-to-top">↑</a>
+            </div>
+        </footer>
+        
 	<body>
 	<script src="./js/iimte_apply_script.js"></script>
 	</body>

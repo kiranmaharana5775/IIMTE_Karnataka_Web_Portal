@@ -93,6 +93,128 @@
     object-fit: contain;
 }
 
+/* Main content should grow to push the footer down */
+.main-content {
+    flex: 1;
+     background: linear-gradient(to right, 
+            rgb(148, 148, 212) ,  
+            rgb(239, 216, 216) ,            
+            rgb(148, 148, 212) );
+}
+
+/* Make the container full width */
+.container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    width: 90%;
+    max-width: 100%;
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box;
+}
+
+/* Style for form cards */
+.form-card {
+    background-color: rgba(245, 241, 241, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(110, 110, 224, 0.8);
+    width: 260px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    animation: zoomInOut 4s infinite;
+}
+
+/* Ensure images fit well */
+.form-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.form-card p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #000000;
+}
+
+/* Footer stays at the bottom */
+.footer {
+    width: 100%;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(64, 62, 62), rgb(0, 0, 0));
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space out copyright, links, and arrow */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Limit width for large screens */
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 20px; /* Add padding */
+}
+
+/* Copyright */
+.copyright p {
+    font-size: 14px;
+    margin: 0; /* Remove default margin */
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.footer-links a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-links a:hover {
+    color: #08f8f8; /* Red text on hover */
+}
+
+/* Back-to-Top Link */
+.back-to-top {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: #ffffff; /* White text */
+    background-color: #0d1dfc;
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Larger size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.back-to-top:hover {
+    color: #ff6b6b; /* Red text on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+@keyframes zoomInOut {
+    0% {
+      transform: scale(1); /* Normal size */
+    }
+    50% {
+      transform: scale(1.07); /* Zoom in */
+    }
+    100% {
+      transform: scale(1); /* Zoom out */
+    }
+  }
+
+
+
 /* Responsive Navigation for Tablets */
 @media screen and (max-width: 1024px) {
     .navbar{
@@ -117,6 +239,11 @@
     .navbar ul li a {
         font-size: 16px;
         padding: 8px 12px;
+    }
+    
+     
+    .container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-links {
@@ -209,6 +336,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    
+    .container {
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .footer-content {

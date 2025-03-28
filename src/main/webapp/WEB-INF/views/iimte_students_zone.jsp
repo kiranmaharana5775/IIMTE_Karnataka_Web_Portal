@@ -94,18 +94,18 @@
 
                 <!-- Navigation Links -->
                 <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about_us.html">About Us</a>
-                    <a href="programmes.html">Programs</a>
-                    <a href="student_zone.html">Student Zone</a>
+                    <a href="home">Home</a>
+                    <a href="about_us">About Us</a>
+                    <a href="programmes">Programs</a>
+                    <a href="students_zone">Student Zone</a>
                     <a href="">Accreditations</a>
-                    <a href="apply.html">Apply</a>
-                    <a href="contact_us.html">Contact Us</a>
-                    <a href="student_login.html" target="_blank">Center Login</a>
+                    <a href="apply">Apply</a>
+                    <a href="contact_us">Contact Us</a>
+                    <a href="student_login" target="_blank">Center Login</a>
                 </div>
 
                 <!-- Back-to-Top Link -->
-                <a href="student_zone.html" class="back-to-top">↑</a>
+                <a href="students_zone" class="back-to-top">↑</a>
             </div>
         </footer>
         

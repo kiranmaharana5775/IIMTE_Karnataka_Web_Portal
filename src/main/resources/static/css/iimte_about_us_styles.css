@@ -119,11 +119,11 @@ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     color: #272727; /* Dark text color */
     line-height: 1.6; /* Improve readability */
     overflow: hidden; /* Clear the float */
-    background: linear-gradient(to right, rgb(233, 235, 233), #efecec , rgb(233, 235, 233));
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right,rgb(242, 244, 242), #f4f4f7, rgb(242, 244, 242));
+    box-shadow: 0px 4px 8px rgba(82, 121, 237, 0.9);
     border-radius: 10px;
     margin: auto;
-    margin-top: 6px ;
+    margin-top: 10px ;
 }
 .sidebar {
     margin: auto;
@@ -135,10 +135,10 @@ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     line-height: 1.6; /* Improve readability */
     overflow: hidden; /* Clear the float */
     padding: 20px;
-    background: linear-gradient(to right, rgb(233, 235, 233), #efecec, rgb(233, 235, 233));
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right,rgb(242, 244, 242), #f4f4f7, rgb(242, 244, 242));
+    box-shadow: 0px 4px 8px rgba(82, 121, 237, 0.9);
     border-radius: 10px;
-    margin-bottom: 6px ;
+    margin-bottom: 10px ;
 }
 .sidebar h2 {
     text-decoration: underline;
