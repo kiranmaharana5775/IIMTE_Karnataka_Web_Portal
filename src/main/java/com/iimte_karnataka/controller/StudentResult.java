@@ -26,27 +26,27 @@ public class StudentResult {
 	
 	@GetMapping("/student_result")
 	@ResponseBody
-    public ResponseEntity<?> getStudentResult(@RequestParam("semester") String semester, Model model, HttpSession session) {
-		Integer semesterNumber = Integer.parseInt(semester);
+    public ResponseEntity<?> getStudentResult(@RequestParam("resultYear") String resultYear, Model model, HttpSession session) {
+		Integer resultYearNumber = Integer.parseInt(resultYear);
 		Student studentDetails = (Student) session.getAttribute("studentDetails");
 
 		String loggedUserName = (studentDetails != null) ? studentDetails.getRegistrationno() : null;
 		
-		List<Result> result = resultCRUD.getMarksByRegistrationNoAndSemester(loggedUserName,semesterNumber);
+		List<Result> result = resultCRUD.getMarksByRegistrationNoAndSemester(loggedUserName,resultYearNumber);
 		
         if (result.size() > 0) {
         	session.setAttribute("resultDetails", result);
-        	session.setAttribute("resultSemester", (semester.charAt(semester.length()-1)));
+        	session.setAttribute("resultSemester", (resultYear.charAt(resultYear.length()-1)));
         	session.setAttribute("resultSession", result.get(0).getSessionDate());
         	session.setAttribute("resultDate", result.get(0).getIssueDate());
-        	return ResponseEntity.ok(Map.of("redirect", "/resultPage?semester=" + semester));
+        	return ResponseEntity.ok(Map.of("redirect", "/resultPage?resultYear=" + resultYear));
         } else {
-        	return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", "❌ No result found for semester " + semester + "."));
+        	return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", "❌ No result found for semester " + resultYear + "."));
         }
     }
 	
 	@GetMapping("/resultPage")
-    public String showResultPage(@RequestParam("semester") String semester, Model model) {
+    public String showResultPage(@RequestParam("resultYear") String resultYear, Model model) {
         return "student_result_marksheet"; // Load result.jsp
     }
 

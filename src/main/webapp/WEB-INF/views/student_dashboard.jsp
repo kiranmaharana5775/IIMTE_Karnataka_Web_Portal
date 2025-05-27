@@ -172,10 +172,10 @@
 	                <label for="semester-select" class="selection-label">Select Semester</label>
 	                <select id="semester-select" class="semester-dropdown">
 	                  <option value="" disabled selected>Select</option>
-	                  <option value="Sem 1">Sem 1</option>
-	                  <option value="Sem 2">Sem 2</option>
-	                  <option value="Sem 3">Sem 3</option>
-	                  <option value="Sem 4">Sem 4</option>
+	                  <option value="Sem 1">Year 1</option>
+	                  <option value="Sem 2">Year 2</option>
+	                  <option value="Sem 3">Year 3</option>
+	                  
 	                </select>
 	              </div>
 	              

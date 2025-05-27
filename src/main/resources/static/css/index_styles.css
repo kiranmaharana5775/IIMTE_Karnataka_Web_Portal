@@ -316,15 +316,15 @@
 
 /* Second Partition (30%) - Login Button */
 .login-section {
-    width: 20%; /* Default width for larger screens */
+    width: 100%; /* Default width for larger screens */
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0 20px;
     z-index: 1;
     /* background: linear-gradient(to left, #37eb79, #5663cd, #37eb79); */
-    background: linear-gradient(to right, #56e98c, #ffffff);
+    background: linear-gradient(to right, #56e98c, #ffffff,  #56e98c);
 }
 
 /* Login Icon */

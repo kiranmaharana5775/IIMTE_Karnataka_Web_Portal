@@ -64,7 +64,7 @@
         <!-- Full-width Container -->
         <div class="full-width-container">
             <!-- First Partition (70%) - Notice Board -->
-            <div class="notice-section">
+            <!-- <div class="notice-section">
                 <img src="./img/notice_board2.jpg" alt="Notice Icon" class="section-icon">
                 <div class="notice-content">
                     <h3>Kind Attention Here for Your Notices</h3>
@@ -73,11 +73,11 @@
                         <p>Important Notice: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
-            </div>
+            </div>  -->
 
             <!-- Second Partition (30%) - Login Button -->
             <div class="login-section">
-                <img src="./img/user.jpg" alt="Login Icon" class="section-icon" style="border-radius: 50%;">
+                <!-- <img src="./img/user.jpg" alt="Login Icon" class="section-icon" style="border-radius: 50%;"> -->
                 <button class="login-btn" id="studentLoginBtn">Student Login</button>
             </div>
         </div>

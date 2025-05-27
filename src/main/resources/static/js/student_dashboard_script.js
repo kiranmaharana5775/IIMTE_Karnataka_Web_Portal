@@ -82,17 +82,16 @@
 	}
 	
 	function fetchResult() {
-	    var semester = document.getElementById("semester-select").value;
-	    semester = semester.charAt(semester.length - 1);
+	    var resultYear = document.getElementById("semester-select").value;
+	    resultYear = resultYear.charAt(resultYear.length - 1);
 	    var errorMessage = document.getElementById("error-message");
 	
-	    if (!semester) {
+	    if (!resultYear) {
 	        errorMessage.textContent = "⚠️ Please select a semester.";
 	        errorMessage.style.display = "block";
 	        return;
 	    }
-	
-	    fetch("/student_result?semester=" + encodeURIComponent(semester), {
+	    fetch("/student_result?resultYear=" + encodeURIComponent(resultYear), {
 	        method: "GET",
 	    })
 	    .then(response => response.json())
