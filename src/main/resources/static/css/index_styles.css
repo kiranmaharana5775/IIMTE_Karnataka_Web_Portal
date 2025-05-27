@@ -323,8 +323,8 @@
     justify-content: center;
     padding: 0 20px;
     z-index: 1;
-    /* background: linear-gradient(to left, #37eb79, #5663cd, #37eb79); */
-    background: linear-gradient(to right, #56e98c, #ffffff,  #56e98c);
+    
+    /* background: linear-gradient(to right, #56e98c, #ffffff,  #56e98c); */
 }
 
 /* Login Icon */
@@ -337,8 +337,8 @@
     padding: 12px 30px;
     font-size: 18px;
     font-weight: bold;
-    color: #fff;
-    background-color: #bc0e0e;
+    color: rgb(51, 51, 122);
+    background: linear-gradient(to top, #56e98c, rgb(128, 255, 255),  #56e98c);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -348,7 +348,7 @@
 
 /* Hover Effect */
 .login-btn:hover {
-    background-color: #0056b3;
+    background: linear-gradient(to top, rgb(128, 255, 255),  #56e98c, rgb(128, 255, 255));
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -719,7 +719,7 @@
     }
 
     .login-section {
-        width: 30%;
+        width: 100%;
     }
 
     .quick-links-header {

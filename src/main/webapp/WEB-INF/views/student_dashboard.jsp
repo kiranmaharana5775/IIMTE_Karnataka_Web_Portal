@@ -169,7 +169,7 @@
 	              </div>
 	              <!-- Rest of the selection container content -->
 	              <div class="semester-selection">
-	                <label for="semester-select" class="selection-label">Select Semester</label>
+	                <label for="semester-select" class="selection-label">Select Year</label>
 	                <select id="semester-select" class="semester-dropdown">
 	                  <option value="" disabled selected>Select</option>
 	                  <option value="Sem 1">Year 1</option>
