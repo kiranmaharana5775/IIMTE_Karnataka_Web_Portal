@@ -77,7 +77,7 @@
 	            <div class="welcome-container">
 	                <!-- Left Side -->
 	                <div class="welcome-text">
-	                <div class="date" id="date"></div>
+	                <!-- <div class="date" id="date"></div>  -->
 	                <div class="welcome-message">
 	                    Welcome Back, <span class="animated-name" id="animated-name"><%= ((Student) session.getAttribute("studentDetails")).getUsername() %> ..!</span>
 	                </div>

@@ -45,48 +45,48 @@
                 <div class="grid-item">
                     <div class="grid-header">UNDER GRADUATES (UG) COURSES</div>
                     <img src="./img/undergraduate.png" alt="Icon 1" class="grid-icon">
-                    <a href="#" class="grid-link">Know More →</a>
+                    <a href="under_graduate_course" class="grid-link">Know More →</a>
                 </div>
                 <div class="grid-item">
                     <div class="grid-header">POST GRADUATES (PG) COURSES</div>
                     <img src="./img/graduate.png" alt="Icon 2" class="grid-icon">
-                    <a href="#" class="grid-link">Know More →</a>
+                    <a href="post_graduate_course" class="grid-link">Know More →</a>
                 </div>
                
                 <div class="grid-item">
                     <div class="grid-header">DIPLOMA ENGINEERING COURSES</div>
                     <img src="./img/student.png" alt="Icon 4" class="grid-icon">
-                    <a href="#" class="grid-link">Know More →</a>
+                    <a href="diploma_engineering_course" class="grid-link">Know More →</a>
                 </div>
 
                 <div class="grid-item">
                     <div class="grid-header">ADVANCE DIPLOMA COURSES</div>
                     <img src="./img/diploma.png" alt="Icon 1" class="grid-icon">
-                    <a href="#" class="grid-link">Know More →</a>
+                    <a href="advance_diploma_course" class="grid-link">Know More →</a>
                 </div>
 
                 <div class="grid-item">
                     <div class="grid-header">POST GRADUATE DIPLOMA COURSES</div>
                     <img src="./img/graduation-diploma.png" alt="Icon 2" class="grid-icon">
-                    <a href="#" class="grid-link">Know More →</a>
+                    <a href="post_graduate_diploma_course" class="grid-link">Know More →</a>
                 </div>
 
                 <div class="grid-item">
                     <div class="grid-header">1 YEAR DIPLOMA COURSES</div>
                     <img src="./img/rocket.png" alt="Icon 3" class="grid-icon">
-                    <a href="#" class="grid-link">Know More →</a>
+                    <a href="one_year_diploma_course" class="grid-link">Know More →</a>
                 </div>
                
                 <div class="grid-item">
                     <div class="grid-header">CERTIFICATE PROGRAM COURSES</div>
                     <img src="./img/certificate.png" alt="Icon 3" class="grid-icon">
-                    <a href="#" class="grid-link">Know More →</a>
+                    <a href="certificate_program_course" class="grid-link">Know More →</a>
                 </div>
 
                 <div class="grid-item">
                     <div class="grid-header">HUMANITIES COURSES</div>
                     <img src="./img/population.png" alt="Icon 4" class="grid-icon">
-                    <a href="#" class="grid-link">Know More →</a>
+                    <a href="humanity_course" class="grid-link">Know More →</a>
                 </div>
             </div>
        </div>

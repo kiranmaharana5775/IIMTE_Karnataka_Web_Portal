@@ -27,7 +27,7 @@
                 <img src="img/college_name.jpg" alt="Institute Name" class="college-name">
                 <div class="statement-container">
                     <div class="statement">STATEMENT OF MARKS</div>
-                    <div class="course">M.TECH-COMPUTER SCIENCE</div>
+                    <div class="course"><%= ((Student) session.getAttribute("studentDetails")).getCourse() %> - <%= ((Student) session.getAttribute("studentDetails")).getSpecialization() %></div> 
                 </div>
             </div>
         </div>
