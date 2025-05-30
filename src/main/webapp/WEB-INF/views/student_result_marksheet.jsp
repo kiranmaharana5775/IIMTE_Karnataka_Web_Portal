@@ -20,8 +20,8 @@
 		<div class="container">
 
         <div class="header">
-            <div class="watermark">
-            </div>
+            <!--  <div class="watermark">
+            </div>-->
             <img src="img/iimt-logo.png" alt="Institute Logo" class="logo">
             <div class="title-container">
                 <img src="img/college_name.jpg" alt="Institute Name" class="college-name">

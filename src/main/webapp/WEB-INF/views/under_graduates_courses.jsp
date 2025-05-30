@@ -246,7 +246,7 @@
                 </div>
 
                 <!-- Back-to-Top Link -->
-                <a href="under_graduate_courses.html" class="back-to-top">↑</a>
+                <a href="under_graduate_course" class="back-to-top">↑</a>
             </div>
         </footer>
 

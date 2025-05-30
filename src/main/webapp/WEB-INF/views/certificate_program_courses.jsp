@@ -221,7 +221,7 @@
                 </div>
 
                 <!-- Back-to-Top Link -->
-                <a href="under_graduate_courses.html" class="back-to-top">↑</a>
+                <a href="certificate_program_course" class="back-to-top">↑</a>
             </div>
         </footer>
 

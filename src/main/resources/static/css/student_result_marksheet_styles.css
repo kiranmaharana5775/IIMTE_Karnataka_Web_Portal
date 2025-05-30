@@ -18,7 +18,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
-    background-image: url("../img/certificate_bg.png");
+    /*background-image: url("../img/certificate_bg.png"); */
     object-fit: cover;
     border: 1px solid #c2b6b6;
     background-size: cover;
@@ -28,7 +28,8 @@ body {
 /* Header */
 .header {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
@@ -215,7 +216,7 @@ td {
     
     .header {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center; /* Align logo and text properly */
         justify-content: space-between; /* Push items to the edges */
         margin-bottom: 40px;
