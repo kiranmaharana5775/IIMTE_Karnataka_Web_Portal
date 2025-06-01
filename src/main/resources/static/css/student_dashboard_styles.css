@@ -152,11 +152,18 @@
     height: 70px;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  .campus-name{
+	font-size: 25px;
+    font-weight: bold;
+    color: rgb(91, 91, 216);
+    padding-left: 25px;
   }
   
   /* User info styling */
@@ -181,6 +188,7 @@
     font-size: 18px;
     font-weight: bold;
     color: #333;
+    text-align: center;
   }
   
   /* Content container styling */
@@ -557,6 +565,9 @@
     flex-direction: column;
     height: auto;
   }
+  .image-container {
+    display: none;
+  }
   
   .selection-container {
     width: 60%;
@@ -565,8 +576,28 @@
   .sidebar {
     width: 100%;
     margin: 0;
-    border-radius: 0;
     box-shadow: none;
+  }
+  
+  .sidebar-menu{
+	height: 100%;
+    margin: 10px;
+    margin-bottom: 80px;
+  }
+  
+  .user-name {
+    font-size: 15px;
+  }
+  
+  .user-info{
+	  margin-bottom: 20px;
+  }
+  
+  
+  .campus-name{
+	font-size: 22px;
+	margin-bottom: 20px;
+	padding: 0px;
   }
 
   .main-content {
@@ -612,13 +643,41 @@
   .details {
     text-align: left;
   }
+  
+  .user-profile {
+    flex-direction: column;
+    height: auto; /* Allow height to adjust based on content */
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
   /* Further reduce font sizes */
+  
+  .container {
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+  }
   .selection-container {
     width: 70%;
     }
+    
+   .image-container {
+    display: none;
+  }
+  
+  .sidebar {
+    width: 100%;
+    box-shadow: none;
+  }
+  
+  .sidebar-menu{
+	height: 100%;
+    margin: 10px;
+    margin-bottom: 80px;
+  }
   
   .user-name {
     font-size: 14px;
@@ -651,6 +710,13 @@
     padding: 10px;
   }
   
+  .user-profile {
+    flex-direction: column;
+    height: auto; /* Allow height to adjust based on content */
+    justify-content: center;
+    align-items: center;
+  }
+  
 }
 
 @media (max-width: 576px) {
@@ -669,16 +735,30 @@
   .image-container {
     display: none;
   }
+  
+ 
 
   /* Adjust sidebar menu padding */
   .sidebar-menu {
-    height: 320px;
-    padding: 0 10px;
+    height: 100%;
+    margin: 10px;
+    margin-bottom: 60px;
   }
 
   /* Reduce font sizes further */
   .user-name {
     font-size: 12px;
+  }
+  
+  .user-info{
+	  margin-bottom: 20px;
+  }
+  
+  
+  .campus-name{
+	font-size: 19px;
+	margin-bottom: 20px;
+	padding: 0px;
   }
 
   .welcome-text .welcome-message {
@@ -704,4 +784,12 @@
     font-size: 14px;
     bottom: 15px;
   }
+  
+  .user-profile {
+    flex-direction: column;
+    height: auto; /* Allow height to adjust based on content */
+    justify-content: center;
+    align-items: center;
+  }
+  
 }

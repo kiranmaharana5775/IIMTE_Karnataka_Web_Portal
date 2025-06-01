@@ -91,8 +91,9 @@
 	        <!-- Right Side: Contact Details -->
 	        <div class="contact-details">
 	            <h2>Indian Institute of Management and Technical Education Society</h2>
-	            <p><strong>Registered Office:</strong> J P Nagar, Bengaluru - 560078</p>
-	            <p><strong>Email:</strong> iimteinida@gmail.com</p>
+	            <p><strong>Registered Office:</strong> J P Nagar, Bangalore - 560078</p>
+	            <p><strong>Email: </strong> <a href="mailto:mail@iimtekarnataka.in">mail@iimtekarnataka.in</a></p>
+
 	        </div>
 	    </div>
         

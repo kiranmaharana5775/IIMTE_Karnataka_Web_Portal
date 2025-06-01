@@ -1,18 +1,18 @@
  const dashboardOption = document.getElementById('dashboard-option');
-    const enrolledSubjectOption = document.getElementById('subjects-option');
+    //const enrolledSubjectOption = document.getElementById('subjects-option');
     const admitCardOption = document.getElementById('admit-card-option');
     const resultOption = document.getElementById('result-option');
 
     // Get content sections
     const dashboardContent = document.getElementById('dashboard-content');
-    const enrolledSubjectContent = document.getElementById('enrolled-subject-content');
+    //const enrolledSubjectContent = document.getElementById('enrolled-subject-content');
     const admitCardContent = document.getElementById('admit-card-content');
     const resultContent = document.getElementById('result-content');
 
     // Function to hide all content
     function hideAllContent() {
       dashboardContent.style.display = 'none';
-      enrolledSubjectContent.style.display = 'none';
+      //enrolledSubjectContent.style.display = 'none';
       admitCardContent.style.display = 'none';
       resultContent.style.display = 'none';
     }
@@ -20,7 +20,7 @@
     // Function to remove the 'selected' class from all menu items
     function removeSelectedClass() {
       dashboardOption.classList.remove('selected');
-      enrolledSubjectOption.classList.remove('selected');
+      //enrolledSubjectOption.classList.remove('selected');
       admitCardOption.classList.remove('selected');
       resultOption.classList.remove('selected');
     }
@@ -33,12 +33,12 @@
       dashboardOption.classList.add('selected');
     });
 
-    enrolledSubjectOption.addEventListener('click', () => {
+    /*enrolledSubjectOption.addEventListener('click', () => {
       hideAllContent();
       enrolledSubjectContent.style.display = 'block';
       removeSelectedClass();
       enrolledSubjectOption.classList.add('selected');
-    });
+    }); */
 
     admitCardOption.addEventListener('click', () => {
       hideAllContent();

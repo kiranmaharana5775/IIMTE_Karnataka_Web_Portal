@@ -41,10 +41,10 @@
 	          <i class="fas fa-id-card"></i>
 	          <span>Dashboard</span>
 	        </li>
-	        <li id="subjects-option">
+	        <!--<li id="subjects-option">
 	          <i class="fas fa-book"></i>
 	          <span>Subjects</span>
-	        </li>
+	        </li>-->
 	        <li id="admit-card-option">
 	          <i class="fas fa-clipboard-list"></i>
 	          <span>Admit Card</span>
@@ -64,9 +64,11 @@
 	    <main class="main-content">
 	      <!-- User profile container -->
 	      <div class="user-profile">
+	        <span class="campus-name">IIMTE CAMPUS</span>
 	        <div class="user-info">
 	          <img src="data:image/jpeg;base64,<%= base64Image %>" alt="User Image" class="user-image">
-	          <span class="user-name"><%= ((Student) session.getAttribute("studentDetails")).getUsername() %></span>
+	          <span class="user-name"><%= ((Student) session.getAttribute("studentDetails")).getUsername() %> <br> <%= ((Student) session.getAttribute("studentDetails")).getRegistrationno() %></span>
+	          <!-- <span class="user-name"><%= ((Student) session.getAttribute("studentDetails")).getRegistrationno() %></span>   -->
 	        </div>
 	      </div>
 	      <!-- Main content container -->
@@ -147,11 +149,11 @@
 	            </div>
 	        </div>
 	        <!-- Enrolled Courses content -->
-	        <div id="enrolled-subject-content" class="content" style="display: none;">
+	        <!--<div id="enrolled-subject-content" class="content" style="display: none;">
 	          <h1>Subjects</h1>
 	          <p>This is the enrolled courses content area.</p>
-	        </div>
-	        <!-- Result content -->
+	        </div>-->
+	        <!-- Admit card content -->
 	        <div id="admit-card-content" class="content" style="display: none;">
 	          <h1>Admit Card</h1>
 	          <p>This is the result content area.</p>
