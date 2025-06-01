@@ -104,7 +104,7 @@
 	                    <p>University / Council</p>
 	                    <p>Center</p>
 	                    <p>Course</p>
-	                    <p>Specialization</p>
+	                    <!-- <p>Specialization</p>  -->
 	                    <p>Registration No.</p>
 	                    <p>Session</p>
 	                  </div>
@@ -113,8 +113,8 @@
 	                  <div class="details">
 	                    <p>IIMTE, Karnataka</p>
 	                    <p>IIMTE COLLEGE CAMPUS</p>
-	                    <p><%= ((Student) session.getAttribute("studentDetails")).getCourse() %></p>
-	                    <p><%= ((Student) session.getAttribute("studentDetails")).getSpecialization() %></p>
+	                    <p><%= ((Student) session.getAttribute("studentDetails")).getCourse() %> (<%= ((Student) session.getAttribute("studentDetails")).getSpecialization() %>)</p>
+	                    <!--  <p>remover specialization from here and pase above</p>  -->
 	                    <p><%= ((Student) session.getAttribute("studentDetails")).getRegistrationno() %></p>
 	                    <p><%= ((Student) session.getAttribute("studentDetails")).getJoiningdate().toLocalDate().getYear()%> - <%= ((Student) session.getAttribute("studentDetails")).getPassoutdate().toLocalDate().getYear()%></p>
 	                    

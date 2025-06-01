@@ -2,6 +2,7 @@ package com.iimte_karnataka.entity;
 
 import java.sql.Date;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -13,6 +14,7 @@ import jakarta.persistence.Id;
 public class Student {
 	
 	@Id
+	@Column(unique = true)
 	private String registrationno;
 	private String username;
 	private String userpassword;
