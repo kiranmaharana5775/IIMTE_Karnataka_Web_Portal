@@ -39,7 +39,7 @@
             </div>
             <div class="right">
                 <div><span class="label">Session        <span class="colun">:</span></span><span class="value"><%= session.getAttribute("resultSession") %></span></div>
-                <div><span class="label">Study Centrer     <span class="colun">:</span></span><span class="value">IIMTE/KAR/0019</span></div>
+                <div><span class="label">Study Centrer     <span class="colun">:</span></span><span class="value">IIMTE/KAR/0013</span></div>
                 <div><span class="label">Year/Semester     <span class="colun">:</span></span><span class="value"><%= session.getAttribute("resultSemester") %></span></div>
             </div>
             
