@@ -36,11 +36,12 @@
   .sidebar {
     width: 25%; /* Sidebar takes 25% of the container width */
     margin: 20px; /* Margin inside the sidebar */
-    background: linear-gradient(to right, 
-      rgb(148, 148, 212),  /* Dark blue fades out quickly */
+    /* background: linear-gradient(to right, 
+      rgb(148, 148, 212),  
       rgb(162, 162, 210) ,          
-      rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
-    ); /* Light background for contrast */
+      rgb(148, 148, 212)   
+    ); */
+    background: linear-gradient(to right, #b6fbff, #83a4d4);
     border-radius: 20px; /* Rounded corners on the left side */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7); /* Shadow on the right side */
     display: flex;
@@ -53,11 +54,12 @@
   .image-container {
     width: 60%; /* 60% width of the sidebar */
     aspect-ratio: 1; /* Makes it a square (equal width and height) */
-    background: linear-gradient(to right, 
-      rgb(91, 91, 216),  /* Dark blue fades out quickly */
+   /* background: linear-gradient(to right, 
+      rgb(91, 91, 216), 
       rgb(129, 129, 206) ,          
-      rgb(91, 91, 216)   /* Dark blue appears only at the right edge */
-    );
+      rgb(91, 91, 216)   
+    ); */
+    background: linear-gradient(to right, #b6fbff, #83a4d4);
     border-radius: 20px; /* Rounded corners */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
     display: flex;
@@ -88,7 +90,7 @@
     padding: 15px;
     margin: 10px 0;
     border-radius: 10px;
-    color: #fff;
+    color: #0612f7;
     cursor: pointer;
     transition: all 0.3s ease;
   }
@@ -154,7 +156,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #b6fbff, #83a4d4);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
   }
@@ -209,14 +211,14 @@
     margin: 0 auto;
     background-image: url('./img/background-image.jpg'); /* Add your background image */
     background: linear-gradient(to right, 
-    rgb(148, 148, 212),  /* Dark blue fades out quickly */
+    rgb(148, 148, 212), 
     rgb(168, 168, 192) ,          
-    rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
-  ); /* Light background for contrast */
+    rgb(148, 148, 212)   
+  );
     background-size: cover;
     background-position: center;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Shadow on the right side */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Shadow on the right side */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -243,7 +245,7 @@
   }
   
   .welcome-text .animated-name {
-    color: #ffdd57; /* Highlight color for the name */
+    color: #0612f7; /* Highlight color for the name */
   }
   
   /* Welcome Image (Right Side) */
@@ -271,24 +273,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, 
-    rgb(148, 148, 212),  /* Dark blue fades out quickly */
-    rgb(168, 168, 192) ,          
-    rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
-  ); /* Light background for contrast */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Shadow on the right side */
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Shadow on the right side */
     z-index: 1;
   }
   .academic-details-container {
     width: 100%;
     margin-top: 10px; /* Space between welcome container and this container */
-    background: linear-gradient(to right, 
-      rgb(148, 148, 212),  /* Dark blue fades out quickly */
+    /* background: linear-gradient(to right, 
+      rgb(148, 148, 212),  
       rgb(168, 168, 192) ,          
-      rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
-    ); /* Light background for contrast */
+      rgb(148, 148, 212)   
+    ); */
+    
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Shadow on the right side */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Shadow on the right side */
     padding: 20px;
   }
 
@@ -296,13 +296,9 @@
 .personal-details-container {
   width: 100%;
   margin-top: 10px; /* Space between welcome container and this container */
-  background: linear-gradient(to right, 
-    rgb(148, 148, 212),  /* Dark blue fades out quickly */
-    rgb(168, 168, 192) ,          
-    rgb(148, 148, 212)   /* Dark blue appears only at the right edge */
-  ); /* Light background for contrast */
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Shadow on the right side */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Shadow on the right side */
   padding: 20px;
 }
 
@@ -490,6 +486,104 @@
   display: none; /* Initially hidden */
 }
 
+
+
+.tabs {
+      max-width: 100%;
+      margin: auto;
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .tab-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+
+    .tab-buttons button {
+      flex: 1;
+      padding: 15px;
+      background: transparent;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.4s, transform 0.2s;
+      position: relative;
+    }
+
+    .tab-buttons button i {
+      margin-right: 8px;
+    }
+
+    .tab-buttons button.active {
+      background: #00c6ff;
+      color: #000;
+      box-shadow: inset 0 -3px 5px rgba(0,0,0,0.3);
+      transform: scale(1.03);
+    }
+
+    .tab-buttons button:not(.active):hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .tab-content {
+      display: none;
+      padding: 30px 20px;
+      animation: slideIn 0.5s ease-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    
+
+table {
+    font-family: 'Segoe UI', sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+table, th {
+    border: 1px solid black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 6px 12px; 
+    font-size: 14px;
+    text-align: center;
+}
+th {
+    background-color:transparent;
+    font-weight: bold;
+}
+td:nth-child(2), th:nth-child(2) {
+    text-align: center;
+}
+td {
+    white-space: nowrap; 
+}
+
 /* Fade-in animation */
 @keyframes fadeIn {
   from {
@@ -650,6 +744,10 @@
     justify-content: center;
     align-items: center;
   }
+  
+  .campus-name{
+	margin-top: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -716,7 +814,9 @@
     justify-content: center;
     align-items: center;
   }
-  
+  .campus-name{
+	margin-top: 10px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -758,6 +858,7 @@
   .campus-name{
 	font-size: 19px;
 	margin-bottom: 20px;
+	margin-top: 10px;
 	padding: 0px;
   }
 
@@ -793,3 +894,54 @@
   }
   
 }
+
+@media (max-width: 600px) {
+      .tab-buttons button {
+        font-size: 14px;
+        padding: 12px 10px;
+      }
+    }
+    
+@media (max-width: 1024px) {
+  table {
+    font-size: 13px;
+    min-width: 900px;
+  }
+
+  #tab-contents {
+    overflow-x: auto;
+  }
+
+  th, td {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 12px;
+    min-width: 700px;
+  }
+
+  th, td {
+    padding: 4px 8px;
+  }
+
+  td:nth-child(2), th:nth-child(2) {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 10px;
+    min-width: 500px;
+  }
+}
+
+
+
+
+
+
+

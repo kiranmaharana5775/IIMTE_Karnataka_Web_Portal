@@ -2,6 +2,7 @@ package com.iimte_karnataka.controller;
 
 import org.springframework.ui.Model;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +25,7 @@ public class StudentResult {
 	@Autowired
 	ResultCURD resultCRUD;
 	
-	@GetMapping("/student_result")
+	/*@GetMapping("/student_result")
 	@ResponseBody
     public ResponseEntity<?> getStudentResult(@RequestParam("resultYear") String resultYear, Model model, HttpSession session) {
 		Integer resultYearNumber = Integer.parseInt(resultYear);
@@ -48,6 +49,89 @@ public class StudentResult {
 	@GetMapping("/resultPage")
     public String showResultPage(@RequestParam("resultYear") String resultYear, Model model) {
         return "student_result_marksheet"; // Load result.jsp
+    }*/
+	
+	@ResponseBody
+    @GetMapping("/student_result")
+    public Map<String, String> getStudentResult(@RequestParam("resultYear") int resultYear,
+                                                HttpSession session) {
+        Map<String, String> response = new HashMap<>();
+
+        Student student = (Student) session.getAttribute("studentDetails");
+        if (student == null) {
+            response.put("error", "Student session not found.");
+            return response;
+        }
+
+        List<Result> results = resultCRUD.getMarksByRegistrationNoAndSemester(
+                student.getRegistrationno(), resultYear);
+
+        if (results == null || results.isEmpty()) {
+            response.put("error", "No results found.");
+            return response;
+        }
+
+        int totalMax = 0;
+        int totalMin = 0;
+        int totalTheory = 0;
+        int totalInternal = 0;
+        int totalScored = 0;
+
+        boolean hasFail = false;
+
+        StringBuilder html = new StringBuilder();
+        html.append("<table border='1' style='width:100%; border-collapse:collapse;min-width: 600px; width: 100%;'>")
+        .append("<tr>")
+        .append("<th style='width: 10%;'>Subject Code</th>")
+        .append("<th style='width: 25%; text-align: center;'>Subjects</th>")
+        .append("<th style='width: 10%;'>Maximum Marks</th>")
+        .append("<th style='width: 10%;'>Minimum Marks</th>")
+        .append("<th style='width: 10%;'>Theory</th>")
+        .append("<th style='width: 10%;'>Internal/<br>Practical</th>")
+        .append("<th style='width: 10%;'>Total</th>")
+        .append("<th style='width: 10%;'>Remarks</th>")
+        .append("</tr>");
+
+
+        for (Result r : results) {
+            int subjectTotal = r.getTotalMarks();
+            totalMax += r.getMaxMarks();
+            totalMin += r.getMinMarks();
+            totalTheory += r.getTheoryMarks();
+            totalInternal += r.getInternalPracticalMarks();
+            totalScored += subjectTotal;
+
+            if ("FAIL".equalsIgnoreCase(r.getRemarks())) {
+                hasFail = true;
+            }
+
+            html.append("<tr>")
+                .append("<td>").append(r.getSubjectCode()).append("</td>")
+                .append("<td style='text-align: left;'>").append(r.getSubjectName()).append("</td>")
+                .append("<td>").append(r.getMaxMarks()).append("</td>")
+                .append("<td>").append(r.getMinMarks()).append("</td>")
+                .append("<td>").append(r.getTheoryMarks()).append("</td>")
+                .append("<td>").append(r.getInternalPracticalMarks()).append("</td>")
+                .append("<td>").append(subjectTotal).append("</td>")
+                .append("<td>").append(r.getRemarks()).append("</td>")
+                .append("</tr>");
+        }
+
+        // Add a total summary row
+        html.append("<tr style='font-weight:bold; background:#f0f0f0;'>")
+        	.append("<td></td>")
+            .append("<td>Total</td>")
+            .append("<td>").append(totalMax).append("</td>")
+            .append("<td>").append(totalMin).append("</td>")
+            .append("<td>").append(totalTheory).append("</td>")
+            .append("<td>").append(totalInternal).append("</td>")
+            .append("<td>").append(totalScored).append("</td>")
+            .append("<td>").append(hasFail ? "FAIL" : "PASS").append("</td>")
+            .append("</tr>");
+
+        html.append("</table>");
+        response.put("content", html.toString());
+        return response;
     }
 
 }

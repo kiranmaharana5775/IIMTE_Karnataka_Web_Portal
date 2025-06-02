@@ -19,6 +19,9 @@
 	
 		<%
 		    Student student = (Student) session.getAttribute("studentDetails");
+			
+			String resultType = student.getResulttype();
+			int resultCount = student.getResultcount();
 		
 		    byte[] imageBytes = student.getImage();
 		    String base64Image = "";
@@ -160,40 +163,64 @@
 	        </div>
 	        <!-- Result content -->
 	        <div id="result-content" class="content" style="display: none;">
-	          <!-- Result container (hidden by default) -->
-	          <div class="result-container" id="result-container">
-	            <div class="selection-container">
-	              <!-- Header wrapper for result-header -->
-	              <div class="header-wrapper">
-	                <div class="result-header">
-	                  View Your Performance
-	                </div>
-	              </div>
-	              <!-- Rest of the selection container content -->
-	              <div class="semester-selection">
-	                <label for="semester-select" class="selection-label">Select Year</label>
-	                <select id="semester-select" class="semester-dropdown">
-	                  <option value="" disabled selected>Select</option>
-	                  <option value="Sem 1">Year 1</option>
-	                  <option value="Sem 2">Year 2</option>
-	                  <option value="Sem 3">Year 3</option>
-	                  
-	                </select>
-	              </div>
-	              
-	              <button class="show-result-button" onclick="fetchResult()">Show Result</button>
-	              <!-- Error message div -->
-	              <div id="error-message" class="error-message">${requestScope.resultErrorMessage}</div>
-	            </div>
-	          </div>
+	          <div class="tabs">
+               
+                <div class="tab-buttons">
+                    <%
+					    for (int i = 0; i < resultCount; i++) {
+					%>
+					    <button class="tab-btn <%= (i == 0 ? "active" : "") %>" onclick="showTab(<%= i %>)">
+					        <i class="fas fa-graduation-cap"></i><%= resultType %> <%= i + 1 %>
+					    </button>
+					<%
+					    }
+					%>
+
+                </div>
+                <img src="./img/college_logo.jpg" alt="Student Image" style="display: block; margin: 10px auto; width: 100px; height: 100px; border-radius: 50%;">
+
+
+                <div id="tab-contents" style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+				<% for (int i = 0; i < resultCount; i++) { %>
+				    <div id="tab-content-<%= i %>" class="tab-content <%= (i == 0 ? "active" : "") %>">
+				        
+				    </div>
+				<% } %>
+				</div>
+              </div>
 	        </div>
 	      </div>
 	    </main>
 	  </div>
 	  
 	    
-		
+		<script>
+			var resultCount = <%= resultCount %>;
+			document.addEventListener("DOMContentLoaded", function() {
+				for (let i = 0; i < resultCount; i++) {
+					fetch("/student_result?resultYear=" + (i+1))
+						.then(res => res.json())
+						.then(data => {
+							document.getElementById("tab-content-" + i).innerHTML = data.error || data.content;
+						})
+						.catch(err => {
+							document.getElementById("tab-content-" + i).innerHTML = "⚠️ Failed to load.";
+							console.error("Error loading result " + i, err);
+						});
+				}
+			});
+
+		    
+		    function showTab(index) {
+		        for (let i = 0; i < resultCount; i++) {
+		            document.getElementById("tab-content-" + i).classList.remove("active");
+		            document.querySelectorAll(".tab-btn")[i].classList.remove("active");
+		        }
+		        document.getElementById("tab-content-" + index).classList.add("active");
+		        document.querySelectorAll(".tab-btn")[index].classList.add("active");
+		    }
+		    
+		</script>
 		<script src="./js/student_dashboard_script.js"></script>
-		
-	</body>
+    </body>
 </html>

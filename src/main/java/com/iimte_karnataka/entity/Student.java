@@ -27,4 +27,6 @@ public class Student {
 	private String mothername;
 	private Date joiningdate;
 	private Date passoutdate;
+	private String resulttype;
+	private Integer resultcount;
 }
