@@ -33,14 +33,14 @@
 
                 <form action = "/student_login" method = "post">
                     <div class="input-group">
-                        <label for="username">Enter username</label>
+                        <label for="username">Registration No.</label>
                         <input type="text" id="username" name="username" required>
                     </div>
                     <div class="input-group">
-                        <label for="password">Your password</label>
+                        <label for="password">Password</label>
                         <input type="password" id="password" name="password" required>
                     </div>
-                    <a href="#" class="forgot-password">Forgot your password?</a>
+                    <!-- <a href="#" class="forgot-password">Forgot your password?</a> -->
                     <button type="submit">SIGN IN</button>
                 </form>
             </div>
